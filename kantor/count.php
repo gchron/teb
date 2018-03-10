@@ -65,7 +65,7 @@ elseif ($_POST["dolar"]) {
   </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+        <button onclick="window.location.href='index.php'" type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
       </div>
     </div>
   </div>
