@@ -17,7 +17,7 @@
         <label><input type="checkbox" value="euro" name="euro">Euro</label>
       </div>
       <div class="checkbox">
-        <label><input type="checkbox" value="dolar" name="dolar">Euro</label>
+        <label><input type="checkbox" value="dolar" name="dolar">Dolar</label>
       </div>
       <div class="checkbox">
         <label><input type="checkbox" value="frank" name="frank">Frank</label>
