@@ -57,10 +57,13 @@
         $daysToTheEnd = $daysIn2018 - $today['yday'];
         echo 'do końca roku pozostało ' . $daysToTheEnd . ' dni';
         echo '<br/><br/>';
-        
-        //Zadanie 4 - napisz skrypt, który na podstawie danych: data urodzenia 1966-09-24 obliczny ile użytkownik ma lat
 
-        
+        //Zadanie 4 - napisz skrypt, który na podstawie danych: data urodzenia 1966-09-24 obliczny ile użytkownik ma lat
+        $birtDay = strtotime('1966-09-24');
+        $birthYear = date("Y", $birtDay);
+        $currentYear = $today['year'];
+        $timeTmp = $currentYear - $birthYear;
+        echo 'hipek ma '.$timeTmp.' lata';
         ?>
     </body>
 </html>
