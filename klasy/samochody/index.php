@@ -20,7 +20,7 @@ include_once 'Samochody.php';
         echo $samochodA->kolor; echo '<br/>';
         echo $samochodA->masa; echo '<br/>';
         print_r($samochodA->predkosc); echo '<br/>';
-        print_r($samochodA->pozycja);
+        print_r($samochodA->pozycja); echo '<br/>';
         ?>
     </body>
 </html>
