@@ -5,7 +5,6 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
-include_once 'PrimeNumbers.php';
 include_once 'PrimeNumbers2.php';
 ?>
 <html>
@@ -15,8 +14,6 @@ include_once 'PrimeNumbers2.php';
     </head>
     <body>
         <?php
-//        $liczba = new PrimeNumbers;
-//        $liczba->isPrime(5);
           $liczba = new PrimeNumbers2;
           $liczba->isPrime(97);
         ?>
