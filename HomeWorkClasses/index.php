@@ -7,26 +7,34 @@ include_once 'klasy/pointss.php';
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Praca domowa</title>
+        <title>Praca domowa Grzegorz Chron</title>
     </head>
     <body>
         <?php
-        $points = new Points;
-        $points->size = 10;
-        $points->save('punkty_10');
+//        $points = new Points;
+//        $points->size = 10;
+//        $points->save('punkty_10');
 //        $points->size = 100;
 //        $points->save('punkty_100');
 //        $points->size = 1000;
 //        $points->save('punkty_1000');
 //        $points->size = 10000;
 //        $points->save('punkty_10000');
-        // chronix
+
         $read = new Point();
-        $tab = $read->read('punkty_10'); //wczytujemy plik i wypluwamy tablicê
+        $tab = $read->readingFile('punkty_10'); //wczytujemy plik, zwraca tablicê po ciêciu ";"
+        $myObjects[] = $read->arrayOfPointsObjectCreating($tab);  // wczytujemy tablicê tniemy po ":", tworzymy obiekty i wypluwamy tablicê obiektów
         echo'<br/>';
-//        echo'<br/> ustawiamy wartosci <br/>';
-        $pointOfClass = new Point(0, 0);
-        
+        print_r($myObjects);
+
+        $defaultClassPoint = new Point(0, 0);
+        echo '<br/><br/>';
+       
+
+
+        $
+
+
 
         /*
          * Praca w domu

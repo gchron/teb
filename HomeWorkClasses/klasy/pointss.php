@@ -25,13 +25,21 @@ class Pointss {
     //float sqrt ( float $argument )
 
     public function distance($pointTwoX, $pointOneX, $pointTwoY, $pointOneY) {
-            $d = sqrt(pow(($pointTwoX - $pointOneX), 2) + pow(($pointTwoY - $pointOneY), 2));
-            return $d;
+        
+        $d = sqrt(pow(($pointTwoX - $pointOneX), 2) + pow(($pointTwoY - $pointOneY), 2));
+        return $d;
     }
-    public function compareDistanceToRadius($d, $r){
+
+    public function compareDistanceToRadius($d, $r) {
         $this->d = $d;
         $this->r = $r;
-        
+//      - Je¿eli obliczona wartoœæ bêdzie mniejsza lub równa promieniowi danej klasy zapis dany punkt w tablicy „ok”.
+//      - Je¿eli obliczona wartoœæ bêdzie wiêksza ni¿ promieñ danej klasy zapisz punkt w tablicy „nok”.        
+        if ($d <= $r) {
+            //wrzuæ do tablicy ok
+        } else {
+            //wrzuc do tablicy nok
+        }
     }
 
 }

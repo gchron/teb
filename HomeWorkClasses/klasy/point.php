@@ -30,36 +30,30 @@ class Point {
 
 // od tegomiejsca moje wypociny 
 
-    public function read($fileName = "punkty_10") {
+    public function readingFile($fileName = "punkty_10") {
         $file = $fileName . '.txt';
         if (file_exists($file)) {
             $fp = fopen($file, 'r');
             $read = fread($fp, filesize($file));
-//            print_r($read);
-            echo '<br/><br/>';
             $firstCut = explode(";", $read);
-//            print_r($firstCut);
-//            echo '<br/> ciecie drugie <br/>';
-//            echo '<br/>';
         } else {
             echo 'nieprawid³owa nazwa pliku';
             echo'<br/>';
         }
+        return $firstCut;
         fclose($fp);
-        $punkt[] = new Point();
-        for ($i = 0; $i < count($firstCut) - 1; $i++) {
-            $secondCut[$i] = explode(":", $firstCut[$i]);
-            print_r($secondCut[$i]);
-            $this->x = $secondCut[$i]['0'];
-            $this->y = $secondCut[$i]['1'];
-            $punkt[$i] = new Point($this->x, $this->y);
-            //print_r($punkt[$i]);
-            echo '<br/><br/>';
-        }
-        print_r($punkt);
-        return($punkt);
-        
     }
-}
+        public function arrayOfPointsObjectCreating($firstCut = array()) {
+            $punkt[] = new Point();
+            for ($i = 0; $i < count($firstCut) - 1; $i++) {
+                $secondCut[$i] = explode(":", $firstCut[$i]);
+                $this->x = $secondCut[$i]['0'];
+                $this->y = $secondCut[$i]['1'];
+                $punkt[$i] = new Point($this->x, $this->y);
+            }
+//            print_r($punkt);
+            return($punkt);
+        }
+    }
 ?>
 
